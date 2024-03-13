@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -19,7 +19,6 @@ func init() {
 }
 
 func TestInputRender(t *testing.T) {
-
 	suggestFn := func(string) (s []string) { return s }
 
 	tests := []struct {
@@ -132,7 +131,6 @@ func TestInputRender(t *testing.T) {
 }
 
 func TestInputPrompt(t *testing.T) {
-
 	tests := []PromptTest{
 		{
 			"Test Input prompt interaction",

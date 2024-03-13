@@ -5,19 +5,19 @@ package main
 import (
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2"
+	"github.com/silphid/survey/v2"
 )
 
 // the questions to ask
 var defaultPasswordCharacterPrompt = &survey.Password{
 	Message: "What is your password? (Default hide character)",
 }
+
 var customPasswordCharacterPrompt = &survey.Password{
 	Message: "What is your password? (Custom hide character)",
 }
 
 func main() {
-
 	var defaultPass string
 	var customPass string
 

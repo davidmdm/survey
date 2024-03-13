@@ -10,8 +10,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 )
 
 func init() {
@@ -20,7 +20,6 @@ func init() {
 }
 
 func TestSelectRender(t *testing.T) {
-
 	prompt := Select{
 		Message: "Pick your word:",
 		Options: []string{"foo", "bar", "baz", "buz"},

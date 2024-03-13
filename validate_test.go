@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/AlecAivazis/survey/v2/core"
+	"github.com/silphid/survey/v2/core"
 )
 
 func TestRequired_canSucceedOnPrimitiveTypes(t *testing.T) {
@@ -179,7 +179,6 @@ func TestComposeValidators_passes(t *testing.T) {
 		// the test failed
 		t.Error("Composed validator did not pass. Wanted string less than 10 chars, passed in", str)
 	}
-
 }
 
 func TestComposeValidators_failsOnFirstError(t *testing.T) {

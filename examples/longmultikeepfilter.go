@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	survey "github.com/AlecAivazis/survey/v2"
+	survey "github.com/silphid/survey/v2"
 )
 
 // the questions to ask
@@ -269,7 +269,6 @@ func main() {
 
 	// ask the question
 	err := survey.Ask(multiQs, &answers, survey.WithKeepFilter(true))
-
 	if err != nil {
 		fmt.Println(err.Error())
 		return

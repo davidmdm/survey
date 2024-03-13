@@ -5,8 +5,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2"
-	TestUtil "github.com/AlecAivazis/survey/v2/tests/util"
+	"github.com/silphid/survey/v2"
+	TestUtil "github.com/silphid/survey/v2/tests/util"
 )
 
 var answer = []string{}
@@ -52,7 +52,6 @@ var table = []TestUtil.TestTableEntry{
 			Options: []string{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"},
 			Description: func(value string, index int) string {
 				return value + fmt.Sprint(index)
-
 			},
 		}, &answer, nil,
 	},

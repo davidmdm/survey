@@ -158,10 +158,9 @@ func IsFieldNotMatch(err error) (string, bool) {
 	return "", false
 }
 
-// BUG(AlecAivazis): the current implementation might cause weird conflicts if there are
+// BUG(silphid): the current implementation might cause weird conflicts if there are
 // two fields with same name that only differ by casing.
 func findField(s reflect.Value, name string) (reflect.Value, reflect.StructField, error) {
-
 	fields := flattenFields(s)
 
 	// first look for matching tags so we can overwrite matching field names

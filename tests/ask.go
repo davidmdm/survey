@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2"
+	"github.com/silphid/survey/v2"
 )
 
 // the questions to ask
@@ -34,7 +34,6 @@ var singlePrompt = &survey.Input{
 }
 
 func main() {
-
 	fmt.Println("Asking many.")
 	// a place to store the answers
 	ans := struct {

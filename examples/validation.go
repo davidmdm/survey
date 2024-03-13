@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2"
+	"github.com/silphid/survey/v2"
 )
 
 // the questions to ask
@@ -36,7 +36,6 @@ func main() {
 		Valid string
 	}{}
 	err := survey.Ask(validationQs, &answers)
-
 	if err != nil {
 		fmt.Println("\n", err.Error())
 	}

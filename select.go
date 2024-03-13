@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 )
 
 /*
@@ -93,7 +93,6 @@ func (s *Select) OnChange(key rune, config *PromptConfig) bool {
 	if key == terminal.KeyEnter || key == '\n' {
 		// if the selected index is a valid option
 		if len(options) > 0 && s.selectedIndex < len(options) {
-
 			// we're done (stop prompting the user)
 			return true
 		}

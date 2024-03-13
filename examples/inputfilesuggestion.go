@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/AlecAivazis/survey/v2"
+	"github.com/silphid/survey/v2"
 )
 
 func suggestFiles(toComplete string) []string {
@@ -34,7 +34,6 @@ func main() {
 
 	// ask the question
 	err := survey.Ask(q, &answers)
-
 	if err != nil {
 		fmt.Println(err.Error())
 		return

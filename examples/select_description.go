@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/AlecAivazis/survey/v2"
+	"github.com/silphid/survey/v2"
 )
 
 type Meal struct {
@@ -14,7 +14,7 @@ type Meal struct {
 }
 
 func main() {
-	var meals = []Meal{
+	meals := []Meal{
 		{Title: "Bread", Comment: "Contains gluten"},
 		{Title: "Eggs", Comment: "Free-range"},
 		{Title: "Apple", Comment: ""},
@@ -25,7 +25,7 @@ func main() {
 	for i, m := range meals {
 		titles[i] = m.Title
 	}
-	var qs = &survey.Select{
+	qs := &survey.Select{
 		Message: "Choose a meal:",
 		Options: titles,
 		Description: func(value string, index int) string {
@@ -37,7 +37,6 @@ func main() {
 
 	// ask the question
 	err := survey.AskOne(qs, &answerIndex)
-
 	if err != nil {
 		fmt.Println(err.Error())
 		return

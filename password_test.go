@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/AlecAivazis/survey/v2/core"
+	"github.com/silphid/survey/v2/core"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -14,7 +14,6 @@ func init() {
 }
 
 func TestPasswordRender(t *testing.T) {
-
 	tests := []struct {
 		title    string
 		prompt   Password

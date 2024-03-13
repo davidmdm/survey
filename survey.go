@@ -8,8 +8,8 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 )
 
 // DefaultAskOptions is the default options on ask, using the OS stdio.
@@ -64,6 +64,7 @@ func defaultAskOptions() *AskOptions {
 		},
 	}
 }
+
 func defaultPromptConfig() *PromptConfig {
 	return &defaultAskOptions().PromptConfig
 }
@@ -408,19 +409,16 @@ func paginate(pageSize int, choices []core.OptionAnswer, sel int) ([]core.Option
 		start = 0
 		end = len(choices)
 		cursor = sel
-
 	} else if sel < pageSize/2 {
 		// if we are in the first half page
 		start = 0
 		end = pageSize
 		cursor = sel
-
 	} else if len(choices)-sel-1 < pageSize/2 {
 		// if we are in the last half page
 		start = len(choices) - pageSize
 		end = len(choices)
 		cursor = sel - start
-
 	} else {
 		// somewhere in the middle
 		above := pageSize / 2

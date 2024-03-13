@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/AlecAivazis/survey/v2"
-	TestUtil "github.com/AlecAivazis/survey/v2/tests/util"
+	"github.com/silphid/survey/v2"
+	TestUtil "github.com/silphid/survey/v2/tests/util"
 )
 
 var val = ""
@@ -21,11 +21,14 @@ var table = []TestUtil.TestTableEntry{
 	},
 	{
 		"Home, End Button test in random location", &survey.Input{Message: "Hello world"}, &val, nil,
-	}, {
+	},
+	{
 		"Delete and forward delete test at random location (test if screen overflows)", &survey.Input{Message: "Hello world"}, &val, nil,
-	}, {
+	},
+	{
 		"Moving around lines with left & right arrow keys", &survey.Input{Message: "Hello world"}, &val, nil,
-	}, {
+	},
+	{
 		"Runes with width > 1. Enter 一 you get to the next line", &survey.Input{Message: "Hello world"}, &val, nil,
 	},
 }

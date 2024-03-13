@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
 	expect "github.com/Netflix/go-expect"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -463,7 +463,8 @@ func Test_computeCursorOffset_MultiSelect(t *testing.T) {
 				"wide one wide one wide one",
 				"two", "three",
 				"wide four wide four wide four",
-				"five", "six"}),
+				"five", "six",
+			}),
 			termWidth: 20,
 			ix:        0,
 			want:      8,
@@ -474,7 +475,8 @@ func Test_computeCursorOffset_MultiSelect(t *testing.T) {
 				"wide one wide one wide one",
 				"two", "three",
 				"012345678901",
-				"five", "six"}),
+				"five", "six",
+			}),
 			termWidth: 20,
 			ix:        0,
 			want:      7,
@@ -484,7 +486,8 @@ func Test_computeCursorOffset_MultiSelect(t *testing.T) {
 			opts: core.OptionAnswerList([]string{
 				"wide one wide one wide one",
 				"wide two wide two wide two",
-				"three", "four", "five", "six"}),
+				"three", "four", "five", "six",
+			}),
 			termWidth: 20,
 			ix:        2,
 			want:      4,
@@ -557,7 +560,8 @@ func Test_computeCursorOffset_Select(t *testing.T) {
 				"wide one wide one wide one",
 				"two", "three",
 				"wide four wide four wide four",
-				"five", "six"}),
+				"five", "six",
+			}),
 			termWidth: 20,
 			ix:        0,
 			want:      8,
@@ -568,7 +572,8 @@ func Test_computeCursorOffset_Select(t *testing.T) {
 				"wide one wide one wide one",
 				"two", "three",
 				"01234567890123456",
-				"five", "six"}),
+				"five", "six",
+			}),
 			termWidth: 20,
 			ix:        0,
 			want:      7,
@@ -578,7 +583,8 @@ func Test_computeCursorOffset_Select(t *testing.T) {
 			opts: core.OptionAnswerList([]string{
 				"wide one wide one wide one",
 				"wide two wide two wide two",
-				"three", "four", "five", "six"}),
+				"three", "four", "five", "six",
+			}),
 			termWidth: 20,
 			ix:        2,
 			want:      4,

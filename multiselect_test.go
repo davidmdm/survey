@@ -10,8 +10,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 )
 
 func init() {
@@ -20,7 +20,6 @@ func init() {
 }
 
 func TestMultiSelectRender(t *testing.T) {
-
 	prompt := MultiSelect{
 		Message: "Pick your words:",
 		Options: []string{"foo", "bar", "baz", "buz"},
@@ -159,7 +158,6 @@ func TestMultiSelectRender(t *testing.T) {
 				PageEntries:   core.OptionAnswerList(prompt.Options),
 				Checked:       map[int]bool{1: true, 3: true},
 				Description: func(value string, index int) string {
-
 					if index%2 == 0 {
 						return descriptions[index]
 					}

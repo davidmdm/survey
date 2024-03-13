@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
+	"github.com/silphid/survey/v2/core"
+	"github.com/silphid/survey/v2/terminal"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -18,7 +18,6 @@ func init() {
 }
 
 func TestConfirmRender(t *testing.T) {
-
 	tests := []struct {
 		title    string
 		prompt   Confirm
